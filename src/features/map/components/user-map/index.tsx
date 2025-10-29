@@ -32,8 +32,8 @@ export const UserMap = memo(({ users }: UserMapProps) => {
         >
             <MapInvalidateOnLoad />
             <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-                url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+                attribution={`&copy; <a href="${import.meta.env.VITE_MAP_ATTRIBUTION_URL}">OpenStreetMap</a> contributors &copy; <a href="${import.meta.env.VITE_MAP_CARTOCOM}">CARTO</a>`}
+                url={import.meta.env.VITE_MAP_TILE_URL}
             />
             <MapMartkerCluster key="markers" users={users} />
         </MapContainer>
