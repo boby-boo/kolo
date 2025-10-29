@@ -20,13 +20,13 @@ All users are visualized as map markers with smart clustering for smooth navigat
 
 ## 🧠 Tech Stack
 
-React
-TypeScript
-SCSS
-Leaflet.js
+* React
+* TypeScript
+* SCSS
+* Leaflet.js
 
 ## ⚙️ Performance Optimizations
 
-React.memo - prevents unnecessary component re-renders.
-useMemo - memoizes filtered user lists for efficiency.
-useDebounce - delays updates for smoother user input.
+* React.memo - prevents unnecessary component re-renders.
+* useMemo - memoizes filtered user lists for efficiency.
+* useDebounce - delays updates for smoother user input.
