@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: $font-family;
+  font-size: $font-size-md;
+  color: $text-100;
+  background: radial-gradient(1200px 1200px at 80% -10%, #122033 0%, $bg-900 55%) fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+}
+
+
+.leaflet-container {
+  width: 100%;
+  height: 100vh;
+  outline: none;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.leaflet-control-zoom a {
+  background: $surface-800;
+  border: $hairline;
+  color: $text-100;
+  backdrop-filter: $backdrop;
+  border-radius: $radius-sm;
+  transition: background $transition, color $transition, border-color $transition;
+
+  &:hover {
+    background: $surface-700;
+    color: $primary;
+    border-color: rgba(255, 255, 255, 0.14);
+  }
+}
+
+.leaflet-control-attribution {
+  background: transparent !important;
+  color: $muted !important;
+
+  a {
+    color: $primary !important;
+  }
+}
+
+.marker-cluster-small,
+.marker-cluster-medium,
+.marker-cluster-large {
+  background: linear-gradient(180deg, rgba(110, 231, 255, 0.18), rgba(110, 231, 255, 0.08));
+  border: 1px solid rgba(110, 231, 255, 0.35);
+  border-radius: 999px;
+  box-shadow: $shadow-1;
+}
+
+.marker-cluster div {
+  background: transparent;
+  color: $text-100;
+  font-weight: 600;
+  border-radius: 999px;
+  border: none;
+}
+
+.leaflet-popup-content-wrapper {
+  background: $surface-800;
+  color: $text-100;
+  border: $hairline;
+  border-radius: $radius-lg;
+  backdrop-filter: $backdrop;
+  box-shadow: $shadow-2;
+}
+
+.leaflet-popup-tip {
+  background: $surface-800;
+  border: $hairline;
+}
+
+.user-popup {
+  h4 {
+    margin: 0 0 $sp-3 0;
+    font-size: $font-size-lg;
+    font-weight: 600;
+  }
+
+  .interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    .chip {
+      font-size: $font-size-xs;
+      color: $text-300;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 4px 8px;
+      border-radius: 999px;
+    }
+  }
+}
+
+.toolbar {
+  position: absolute;
+  top: $sp-6;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: $sp-3;
+  align-items: center;
+  background: $surface-800;
+  border: $hairline;
+  padding: $sp-3 $sp-4;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-2;
+  backdrop-filter: $backdrop;
+  z-index: 1000;
+  width: min(780px, calc(100% - 32px));
+}
+
+.input {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: $sp-2;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: $radius-md;
+  padding: 10px 12px;
+  transition: border-color $transition, background $transition;
+
+  &:focus-within {
+    border-color: $primary;
+    background: rgba(110, 231, 255, 0.08);
+  }
+
+  input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: $text-100;
+    font-size: $font-size-sm;
+    outline: none;
+
+    &::placeholder {
+      color: $muted;
+    }
+  }
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(180deg, rgba(110, 231, 255, 0.16), rgba(110, 231, 255, 0.08));
+  color: $text-100;
+  padding: 10px 14px;
+  font-size: $font-size-sm;
+  border-radius: $radius-md;
+  cursor: pointer;
+  transition: transform $transition, border-color $transition, box-shadow $transition;
+
+  &:hover {
+    border-color: rgba(110, 231, 255, 0.4);
+    box-shadow: 0 0 0 4px rgba(110, 231, 255, 0.12);
+  }
+
+  &:active {
+    transform: translateY(1px) scale(0.99);
+  }
+}
+
+.icon {
+  fill: #8ea1b5;
+  width: 20px;
+  height: 20px;
+  transition: fill $transition;
+  pointer-events: none;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: $font-size-xs;
+  color: $text-300;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card {
+  background: $surface-800;
+  border: $hairline;
+  border-radius: $radius-lg;
+  padding: $sp-5;
+  box-shadow: $shadow-2;
+  backdrop-filter: $backdrop;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (max-width: 680px) {
+  .toolbar {
+    top: $sp-5;
+    padding: $sp-3;
+    gap: $sp-2;
+  }
+
+  .btn {
+    padding: 8px 10px;
+  }
+}

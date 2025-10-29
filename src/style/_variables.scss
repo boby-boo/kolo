@@ -1,0 +1,37 @@
+$font-family: "Roboto", ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 22px;
+  
+$primary: #6ee7ff;      
+$primary-alt: #46d7ff;  
+$bg-900: #0b0f14;
+$bg-800: #0f141a;
+$bg-700: #121821;
+$surface-800: rgba(20, 26, 34, 0.8); 
+$surface-700: rgba(26, 34, 44, 0.7);
+$text-100: #e7eef7;
+$text-300: #b8c4d2;
+$muted: #7b8794;
+$success: #2ecc71;
+$danger: #ff5c5c;
+$warning: #ffb02e;
+
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
+$shadow-1: 0 2px 12px rgba(0,0,0,0.25);
+$shadow-2: 0 10px 30px rgba(0,0,0,0.35);
+$backdrop: blur(10px);
+
+$sp-2: 8px;
+$sp-3: 12px;
+$sp-4: 16px;
+$sp-5: 20px;
+$sp-6: 24px;
+
+$hairline: 1px solid rgba(255,255,255,0.08);
+
+$transition: 180ms ease;

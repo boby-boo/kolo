@@ -1,0 +1,118 @@
+@import "../../../../style/variables.scss";
+
+.user-popup {
+  min-width: 260px;
+
+  .marker-header {
+    display: flex;
+    align-items: center;
+    gap: $sp-3;
+    margin-bottom: $sp-2;
+  }
+
+  .marker-gender {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .marker-title {
+    margin: 0;
+    font-size: $font-size-lg;
+    font-weight: 600;
+    color: $text-100;
+  }
+
+  .marker-age {
+    margin: 0 0 $sp-3 0;
+    font-size: $font-size-sm;
+    color: $text-300;
+  }
+
+  .marker-description {
+    margin-top: $sp-3;
+    padding: $sp-3;
+    border-radius: $radius-md;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.06);
+
+    .marker-description-title {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 0 0 $sp-2 0;
+      font-size: $font-size-sm;
+      font-weight: 600;
+      color: $text-300;
+
+      .marker-description-title-icon {
+        font-size: 14px;
+        line-height: 1;
+      }
+    }
+
+    .marker-description-text {
+      margin: 0;
+      color: $text-100;
+      line-height: 1.45;
+      font-size: $font-size-sm;
+    }
+  }
+
+  .marker-interests {
+    margin-top: $sp-3;
+
+    .marker-interests-title {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 0 0 $sp-2 0;
+      font-size: $font-size-sm;
+      font-weight: 600;
+      color: $text-300;
+
+      .marker-interests-title-icon {
+        font-size: 14px;
+        line-height: 1;
+      }
+    }
+
+    .marker-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .marker-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: $shadow-1;
+      font-size: $font-size-xs;
+      color: $text-300;
+      cursor: pointer;
+
+      .chip-emoji {
+        font-size: 14px;
+        line-height: 1;
+      }
+
+      .chip-text {
+        color: $text-100;
+        text-transform: capitalize;
+        letter-spacing: 0.2px;
+      }
+
+      &:hover {
+        border-color: rgba(110, 231, 255, 0.35);
+        background: rgba(110, 231, 255, 0.08);
+      }
+    }
+  }
+}
